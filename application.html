@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vanshika Academy</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.green.css">
+
+    <!-- Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="./css/animate.css">
+
+    <!-- J-query File Path -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Owl Javascript -->
+    <script src="./js/owl.carousel.min.js"></script>
+
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    strong {
+        color: crimson;
+    }
+
+    .Application_Img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+    /* Scroll Bar Css */
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #scrollPath {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    #progressBar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animationMyScroll 3s linear infinite;
+    }
+
+
+    @keyframes animationMyScroll {
+
+        0%,
+        100% {
+            filter: hue-rotate(0deg);
+        }
+
+        50% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+
+    #progressBar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(10px);
+    }
+
+
+    #progressBar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(30px);
+    }
+</style>
+
+<body>
+
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+
+
+    <!-- NavBar Area -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto title_main" style="color: #fff;" href="/">Vanshika Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars" class="navbar-toggler-icon" style="color: #fff;" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <!-- 
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #fff;" href="#">Hindi Blogs</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./hindi.html">Hindi</a></li>
+                            <li><a class="dropdown-item" href="./english/essay.html">English</a>
+                            <li><a class="dropdown-item" href="./science.html">Science</a></li>
+                                <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./science.html">Ebook</a></li>
+                            <li><a class="dropdown-item" href="./game.html">GameR</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="./Updates/civilservices.html">UPSC Updates</a></li>
+                            <li><a class="dropdown-item" href="./Updates/examupdate.html">Exam Updates</a></li> -->
+                            <li><a class="dropdown-item" href="./Updates/dailynews.html">Free Courses</a></li>
+                            <!-- <li><a class="dropdown-item" href="./Updates/studentRoadMap.html">Student RoadMap</a></li> -->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./blogs/corona.html">Blogs
+                                    On India</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #fff;" href="./hindi.html">Ryhme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #fff;" href="./jibanParichya.html">Jivan Parichya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" style="color: #fff;"
+                            href="./application.html">Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" style="color: #fff;"
+                            href="./essay.html">Essay</a>
+                    </li>
+
+                </ul>
+
+                <!-- <a class="navbar-brand mx-auto title_main" style="color: #fff;" href="/">Vanshika Ki Pathshala</a> -->
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" style="color: #fff;" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <br>
+
+    <h1 style="text-align: center;">HINDI APPLICATION</h1>
+
+
+    <div class="container">
+        <div class="row Application_Img">
+            <div class="col col-lg-4 col-md-4 col-sm-6">
+                <img src="./images/Hinid Images/APPLICATION/img1.jpg" class="img-fluid" alt="No_img">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <br>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-12 col-md-12 col-lg-12">
+                <strong>
+                    <h5 style="text-align: justify;">थाना प्रभारी को ध्वनि - प्रदूषण रोकने के लिये एक पत्र लिखिये ।
+                        उत्तर प्रति , थाना प्रभारी , भोपाल ( म.प्र . ) विषय - ध्वनि प्रदूषण रोकने के सम्बन्ध में ।</h5>
+                </strong>
+
+                <p style="text-align: justify;"> महोदय ,<br>
+                    निवेदन है कि माध्यमिक शिक्षा मंडल की परीक्षाओं का समय निकट है । हम छात्र अपने अध्ययन में व्यस्त हैं
+                    । परन्तु जगह - जगह लाउडस्पीकरों की आवाज से हमारे अध्ययन में व्यवधान पड़ता है । इसके पूर्व
+                    महाविद्यालयों के छात्रों ने आपको एक प्रार्थना पत्र इस सम्बन्ध में दिया है । धार्मिक कार्यक्रमों ,
+                    सभा और दुकानों में निर्बाध रूप से लाउडस्पीकर बजाये जा रहे हैं । इससे ध्वनि प्रदूषण होता है और हम
+                    एकाग्रचित्त होकर अध्ययन नहीं कर सकते । अतः नगर के हजारों छात्रों के भविष्य को ध्यान में रखते हुए
+                    ध्वनि विस्तारक यंत्रों का परीक्षा अवधि में प्रयोग प्रतिबन्ध लगाने सम्बन्धी आदेश जारी करें । धन्यवाद
+                    भवदीय संजय तिवारी अध्यक्ष छात्रसंघ होलीक्रास हाई स्कूल , भोपाल
+                    <br>
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p>दिनांक : 15- m – 20</p>
+                    <p>CLASS 12TH</p>
+                </div>
+
+                </p>
+            </div>
+        </div>
+
+        <script>
+
+            var pubid = '9101727778477834';
+            <!------------------------------------------------------------------------->
+            <!-- Banner Ad Slot Id Here -->
+            var s1 = '2538991671';
+            var pn1 = 'com.FindThePairGame';
+            var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+            </script>
+            <!------------------------------------------------------------------------->
+            
+              <style>
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                    </style>
+                <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                <script src="jquery.tools.min.js"></script>
+                <script type="text/javascript">
+                  $(document).ready(function(){
+                   $("ul.tabs").tabs("div.panes > div");
+                 });
+             </script>
+            
+                 <!-- BANNER 1 -->
+                <tr>
+                   <td> <script type="text/javascript">
+            var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+            </script>
+
+
+        <br><br>
+
+        <div class="row">
+            <div class="col col-sm-12 col-md-12 col-lg-12">
+                <strong>
+                    <h5 style="text-align: justify;">शाला शुल्क मुक्ति के लिए आर्थिक कारण बताते हुए अपने प्राचार्य को एक
+                        आवेदन पत्र लिखिए ।</h5>
+                </strong>
+
+                <p style="text-align: justify;"> सेवा में ,<br>
+
+                    श्रीमान् प्राचार्य महोदय , स्वामी शिवदत्त मेमोरियल स्कूल भेड़ाघाट , जबलपुर विषय - शिक्षण शुल्क माफ
+                    करने हेतु आवेदन । महोदय , सविनय निवेदन है कि मैं आपके विद्यालय की कक्षा 12 वीं ( अ ) की एक निर्धन
+                    छात्रा हूँ । मेरे पिताजी के पास एक बहुत छोटी - सी खेती है , जिसकी कुल वार्षिक आय 4000-5000 रुपये है
+                    । मेरे दो भाई - बहिन भी स्थानीय कॉलेज में अध्ययनरत हैं । मेरे घर में केवल पिताजी ही कमाने वाले सदस्य
+                    हैं । उनकी आय से हमारा गुजारा मुश्किल से हो पाता है । अतएव मेरे पिता प्रतिमास शिक्षण शुल्क देने में
+                    असमर्थ हैं मैंने गत वार्षिक परीक्षा अच्छे अंकों से उत्तीर्ण की है । अतएव श्रीमान से प्रार्थना है कि
+                    मेरे आवेदन - पत्र पर सहानुभूतिपूर्वक विचार करते हुए मुझे शिक्षण शुल्क में छुट प्रदान करने की कृपा
+                    करेंगे ताकि मैं आगे पढ़ सकूँ । आपकी अति कृपा होगी । आपका आज्ञाकारी छात्रा सीमा साहू
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p>दिनांक : 12-08-20 ...</p>
+                    <p> कक्षा 12 वीं</p>
+                </div>
+
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <br><br>
+
+        <div class="row">
+            <div class="col col-sm-12 col-md-12 col-lg-12">
+                <strong>
+                    <h5 style="text-align: justify;">जबलपुर नगरपालिका के अध्यक्ष के पास एक शिकायती - पत्र लिखिए जिसमें
+                        मुहल्ले में सफाई न होने के सम्बन्ध में शिकायत हो ।</h5>
+                </strong>
+
+                <p style="text-align: justify;">
+
+                    प्रति ,<br>
+                    अध्यक्ष ,<br>
+                    जबलपुर नगरपालिका ,<br>
+                    जबलपुर ( म.प्र . ) <br>
+                    विषय - मुहल्ले में सफाई न होने के बाबत् ।<br>
+                    महोदय , निवेदन है कि हम कटोरातालाब के निवासी सफाई की अव्यवस्था से बहुत तंग आ गये हैं । यहाँ नालियों
+                    की सफाई नहीं होती । सड़कें झाड़ी नहीं जातीं । जगह - जगह कचड़ों का ढेर लगा रहता है । नालियों का पानी
+                    उछलकर सड़कों पर फैल जाता है । दुर्गन्ध एवं मच्छरों के फैलाव से मुहल्लेवासियों का जीना हराम हो गया है
+                    । अतः श्रीमान् से निवेदन है कि अविलम्ब इस मुहल्ले की साफ - सफाई के लिए अपने विभाग को आदेश दें । इस
+                    हेतु तत्काल उपाय नहीं किये गये तो हमें आन्दोलन का रास्ता अपना हैं ।
+                    <br> आशा है , आप हम लोगों के निवेदन पर तत्काल ध्यान देंगे । धन्यवाद हम आपके मुहल्ले के नागरिकगण नीरज
+                    दुबे
+                    <br>
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p>दिनांक : 21-08-20 ....</p>
+                    <p> कक्षा 12 वीं</p>
+                </div>
+
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        var pubid = '9101727778477834';
+        <!------------------------------------------------------------------------->
+        <!-- Banner Ad Slot Id Here -->
+        var s1 = '2538991671';
+        var pn1 = 'com.FindThePairGame';
+        var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+        </script>
+        <!------------------------------------------------------------------------->
+        
+          <style>
+                    table, th, td {
+                        border: 1px solid black;
+                    }
+                </style>
+            <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+            <script src="jquery.tools.min.js"></script>
+            <script type="text/javascript">
+              $(document).ready(function(){
+               $("ul.tabs").tabs("div.panes > div");
+             });
+         </script>
+        
+             <!-- BANNER 1 -->
+            <tr>
+               <td> <script type="text/javascript">
+        var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+        </script>
+
+
+
+
+
+
+    <!-- Footer Design Starts -->
+
+
+    <footer class="bg-dark" style="color: #fff;">
+        <p>Copyright &copy; Vanshika Academy 2021 | All Right Reserved !</p>
+    </footer>
+
+
+
+
+
+
+    <!-- Scroll Css -->
+    <script>
+
+        let progress = document.getElementById('progressBar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+
+
+
+
+
+    <!-- My Javascripts -->
+    <script src="./js/script.js"></script>
+    <!-- Wow Js  -->
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vanshika Academy</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.green.css">
+
+    <!-- Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- J-query File Path -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Owl Javascript -->
+    <script src="../js/owl.carousel.min.js"></script>
+
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    strong {
+        color: crimson;
+    }
+
+
+    .SandeepMaheswariContentHoldrer .row .TwoVideoHolder {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px 0px;
+    }
+
+    @media only screen and (min-width:1200px) {
+
+        .n112 {
+            margin: 50px 50px 50px 50px;
+        }
+
+
+
+    }
+
+    @media only screen and (min-width:991px) {
+        .r5 {
+            width: 950px;
+            max-height: 600px;
+        }
+
+        @media only screen and (min-width:700px) {
+            .hr {
+                display: grid;
+                justify-content: left;
+                padding: -800px;
+                margin: 500px -490px;
+            }
+
+        }
+
+    }
+
+    @media only screen and (min-width:1000px) {
+
+        .n112 {
+            margin: 50px 50px 50px 50px;
+        }
+
+    }
+
+    @media only screen and (max-width:785px) {
+        /* .SandeepMaheswariContentHoldrer .row .TwoVideoHolder iframe {
+            width: 200px;
+            height: 200px;
+        } */
+    }
+
+
+
+    @media only screen and (max-width:576px) {
+        .SandeepMaheswariContentHoldrer .row .TwoVideoHolder {
+            flex-direction: column;
+        }
+
+        /* .SandeepMaheswariContentHoldrer .row .TwoVideoHolder iframe {
+            width: 300px;
+            height: 300px;
+        } */
+    }
+
+
+
+    @media only screen and (max-width:315px) {
+        /* .SandeepMaheswariContentHoldrer .row .TwoVideoHolder iframe {
+            width: 200px;
+            height: 200px; */
+
+    }
+
+
+    /* Scroll Bar Css */
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #scrollPath {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    #progressBar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animationMyScroll 3s linear infinite;
+    }
+
+
+    @keyframes animationMyScroll {
+
+        0%,
+        100% {
+            filter: hue-rotate(0deg);
+        }
+
+        50% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+
+    #progressBar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(10px);
+    }
+
+
+    #progressBar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(30px);
+    }
+
+    .r5 {
+        display: flex;
+        justify-content: center;
+        margin: -550PX -50PX 210PX 260PX;
+        padding: 60px 180px 50px;
+        /* width: 950px;
+        max-height: 600px; */
+
+    }
+
+    #r129 {
+        box-shadow: 10px red;
+        /* animation: ram 2s infinite; */
+    }
+
+    /* @keyframes ram{
+        10%{
+            box-shadow: 8px 8px 8px 8px green ;
+        }
+        20%{
+            box-shadow: 8px 8px 8px 8px rgb(2, 255, 255) ;
+        }
+        30%{
+            box-shadow: 8px 8px 8px 8px rgb(218, 218, 218) ;
+        }
+        40%{
+            box-shadow: 8px 8px 8px 8px green ;
+        }
+    } */
+
+
+    .container {
+        padding: 30px;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+    .container p {
+        margin-bottom: 15px;
+    }
+
+    .thumbanail {
+
+        position: relative;
+
+
+
+
+    }
+
+    .thumbanail:before {
+        content: '';
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: 2;
+        overflow: hidden;
+
+    }
+
+    .thumbanail img {
+        width: 250px;
+        height: 100%;
+        border-radius: 8px;
+        transform: scale(1) rotate(0deg);
+        transition: all .5s linear;
+    }
+
+    .thumbanail:hover img {
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    .thumbanail.right {
+        float: right;
+        margin-left: 20px;
+    }
+
+    .thumbanail.left {
+        float: left;
+        margin-right: 20px;
+    }
+
+    @media screen and (max-width:767px) {
+        .thumbanail.right {
+            float: none;
+            margin-left: 0px;
+        }
+
+        .thumbanail.left {
+            float: none;
+            margin-right: 0px;
+        }
+
+        .thumbanail {
+            width: 100%;
+        }
+    }
+
+    .c20 {
+
+        margin: 50px 50px;
+
+    }
+
+    .bt {
+        display: flex;
+        justify-content: center;
+    }
+
+    #blue {
+        color: rgb(81, 128, 252);
+    }
+</style>
+
+<body>
+
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+
+
+    <!-- NavBar Area -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto title_main" style="color: #fff;" href="/">Vanshika Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars" class="navbar-toggler-icon" style="color: #fff;" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <!-- 
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #fff;" href="#">Hindi Blogs</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./hindi.html">Hindi</a></li>
+
+                            <li>
+                                <a class="dropdown-item" href="./english/poem.html">English</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./game.html">GameReviw</a>
+                            </li>
+
+
+                            <hr class="dropdown-divider">
+                    </li>
+
+                    <li><a class="dropdown-item" href="./ebook.html">Ebook</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <!-- <li><a class="dropdown-item" href="../Updates/civilservices.html">UPSC Updates</a></li>
+                            <li><a class="dropdown-item" href="../Updates/examupdate.html">Exam Updates</a></li>
+                            <li><a class="dropdown-item" href="../Updates/dailynews.html">Daily News</a></li> -->
+                    <li><a class="dropdown-item" href="./Updates/dailynews.html">Free Coures</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="./blogs/corona.html">Blogs
+                            On India</a></li>
+                </ul>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Essay
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../essay holder/jobless.html">Jobless</a></li>
+                        <li><a class="dropdown-item" href="../essay holder/atkbd.html">Criminals</a></li>
+                        <li><a class="dropdown-item" href="../essay holder/game.html">Game</a></li>
+                        <li><a class="dropdown-item" href="../essay holder/newInvention.html">Scientific
+                                Invention</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li class="nav-item">
+                        <a class="nav-link" style="color: #fff;" href="./Sandipmaheswari.html">Sandeep Maheswari</a>
+                    </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #fff;" href="../hindi.html">Ryhme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #fff;" href="../jibanParichya.html">Jivan Parichya</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" style="color: #fff;" href="../essay.html">Essay</a>
+                </li>
+
+                </ul>
+
+                <!-- <a class="navbar-brand mx-auto title_main" style="color: #fff;" href="/">Vanshika Ki Pathshala</a> -->
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" style="color: #fff;" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div id="jobcarousel">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img
+                    src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="No_Img"></div>
+            <div class="item"><img
+                    src="https://images.pexels.com/photos/34592/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="No_Img"></div>
+            <div class="item"><img
+                    src="https://images.pexels.com/photos/247899/pexels-photo-247899.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="No_Img"></div>
+            <div class="item"><img
+                    src="https://images.pexels.com/photos/256472/pexels-photo-256472.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="No_Img"></div>
+            <div class="item"><img
+                    src="https://media.istockphoto.com/vectors/group-of-hands-holding-books-reading-banner-vector-id820116664?k=20&m=820116664&s=612x612&w=0&h=vOhNtWcGTfqBNNEB8LF-Ttrc0fVve6tRLEtMTaFMPMs="
+                    alt="No_Img"></div>
+        </div>
+    </div>
+    <br><br>
+
+    <section>
+        <div class="container">
+
+            <h1 id="blue">The Psychology of Money Paperback – 1 September 2020
+                by Morgan Housel (Author)</h1>
+            <div class="thumbanail left">
+
+                <img src="./The psychologyofmoney.jpg" alt="" />
+            </div>
+
+            <p>
+                Timeless lessons on wealth, greed, and happiness doing well with money isn?t necessarily about what you
+                know. It?s about how you behave. And behavior is hard to teach, even to really smart people. How to
+                manage money, invest it, and make business decisions are typically considered to involve a lot of
+                mathematical calculations, where data and formulae tell us exactly what to do. But in the real world,
+                people don?t make financial decisions on a spreadsheet. They make them at the dinner table, or in a
+                meeting room, where personal history, your unique view of the world, ego, pride, marketing, and odd
+                incentives are scrambled together. In the psychology of money, the author shares 19 short stories
+                exploring the strange ways people think about money and teaches you how to make better sense of one of
+                life?s most important matters.
+            </p>
+
+            <div class="myBtnHolder c20">
+                <a href="https://amzn.to/3NrBmFp" class="MyBtn_Here" target="_Abhishek">View Book</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <div class="container">
+        <h1 id="blue">Bhagavad Gita Original in English - Bhagavad Gita as It is Original in English Hardcover – 1
+            January 2020
+            by A. C. Bhaktivedanta Swami Prabhupad (Author)</h1>
+        <div class="thumbanail left">
+
+            <img src="./bhagavad gita.jpg" alt="" />
+        </div>
+
+        <p>
+        <h1 id="blue">Why Bhagavad Gita?</h1>
+        <br>
+        how-bhagavad-gita-transformed-lifeThere is a common misconception among many people that Bhagavad Gita and
+        Mahabharata belong to only those practicing the Hindu religion. The messages contained in the Bhagavad Gita are
+        universally applicable to all, irrespective of their country or religion. It is not a religious scripture
+        pertaining to a certain section of society. Bhagavad Gita teaches us the right way to lead our life. The very
+        purpose of Bhagavad Gita is to deliver mankind from the sufferings of this world. Every man is in difficulty in
+        so many ways, as Arjuna was in, having to fight the Battle of Kurukshetra.
+
+        Bhagavad Gita is the essence of all Vedic knowledge and one of the most important Upanishads in Vedic
+        literature. If one reads Bhagavad Gita regularly and attentively, he can surpass the study of all Vedic
+        literature. Learn the
+        </p>
+
+
+        <div class="myBtnHolder c20">
+            <a href="https://amzn.to/3NtoG0I" class="MyBtn_Here" target="_Abhishek">View Book</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="container">
+        <h1 id="blue">Mahatma Gandhi Autobiography: The Story Of My Experiments With Truth Paperback – 1 January 2009
+            by Mahatma Gandhi (Author)</h1>
+        <div class="thumbanail left">
+
+            <img src="./mg3.jpg" alt="" />
+        </div>
+
+        <p>
+            This unusual autobiography "The Story of My Experiments with Truth", is a window to the workings of Mahatma
+            Gandhi's mind- a window to the emotions of his heart, a window to understanding what drove this seemingly
+            ordinary man to the heights of being the father of a nation- India.
+            Starting with his days as a boy, Gandhi takes one through his trials and turmoils and situations that
+            moulded his philosophy of life- going through child marriage, his studies in England, practicing Law in
+            South Africa- and his Satyagraha there- to the early beginnings of the Independence movement in India.
+            He did not aim to write an autobiography but rather share the experience of his various experiments with
+            truth to arrive at what he perceived as Absolute Truth- the ideal of his struggle against racism, violence
+            and colonialism.
+            <br>
+            This section is written by Mahadev Desai who translated the book from Gujarati to English. In this preface
+            Desai notes that the book was originally published in two volumes, the first in 1927 and second in 1929. He
+            also mentions that the original was priced at 1 rupee and had a run of five editions by the time of the
+            writing of his preface. 50,000 copies had been sold in Gujarati but since the English edition was expensive
+            it prevented Indians from purchasing it. Desai notes the need to bring out a cheaper English version. He
+            also mentions that the translation has been revised by an English scholar who did not want his name to be
+            published. Chapters XXIX–XLIII of Part V were translated by Desai's friend and colleague Pyarelal
+            Nayyar.[14]
+        </p>
+
+        <div class="myBtnHolder c20">
+            <a href="https://amzn.to/3LluIi2" class="MyBtn_Here"
+                target="_Abhishek">View Book</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <h1 id="blue">Open: An Autobiography Paperback – 19 August 2010
+            by Andre Agassi  (Author)
+            </h1>
+        <div class="thumbanail left">
+
+            <img src="./open.jpg" alt="" />
+        </div>
+
+        <p>
+            He is one of the most beloved athletes in history and one of the most gifted men ever to step onto a tennis court – but from early childhood Andre Agassi hated the game.
+
+            Coaxed to swing a racket while still in the crib, forced to hit hundreds of balls a day while still in grade school, Agassi resented the constant pressure even as he drove himself to become a prodigy, an inner conflict that would define him. Now, in his beautiful, haunting autobiography, Agassi tells the story of a life framed by such conflicts.
+            
+            Agassi makes us feel his panic as an undersized seven-year-old in Las Vegas, practicing all day under the obsessive gaze of his violent father. We see him at thirteen, banished to a Florida tennis camp. Lonely, scared, a ninth-grade dropout, he rebels in ways that will soon make him a 1980s icon. By the time he turns pro at sixteen, his new look promises to change tennis forever, as does his lightning fast return.
+            
+            And yet, despite his raw talent, he struggles early on. We feel his confusion as he loses to the world's best, his greater confusion as he starts to win. After stumbling in three Grand Slam finals, Agassi shocks the world, and himself, by capturing the 1992 Wimbledon. Overnight he becomes a fan favorite and a media target.
+            
+            Agassi brings a near-photographic memory to every pivotal match, and every public relationship. Alongside vivid portraits of rivals, Agassi gives unstinting accounts of his brief time with Barbra Streisand and his doomed marriage to Brooke Shields. He reveals the depression that shatters his confidence, and the mistake that nearly costs him everything. Finally, he recounts his spectacular resurrection and his march to become the oldest man ever ranked number one.
+            
+            In clear, taut prose, Agassi evokes his loyal brother, his wise coach, his gentle trainer, all the people who help him regain his balance and find love at last with Stefanie Graf.
+            
+            With its breakneck tempo and raw candor, Open will be read and cherished for years. A treat for ardent fans, it will also captivate readers who know nothing about tennis. Like Agassi's game, it sets a new standard for grace, style,
+        </p>
+
+        <div class="myBtnHolder c20">
+            <a href="https://amzn.to/3Lf8Wwk" class="MyBtn_Here"
+                target="_Abhishek">View Book</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <h1 id="blue">Bose: The Untold Story of an Inconvenient Nationalist | Subhas Chandra Bose Biography | Penguin Books, Indian History Hardcover – 21 February 2022
+            by Chandrachur Ghose  (Author)</h1>
+        <div class="thumbanail left">
+
+            <img src="./BOSE.jpg" alt="">
+        </div>
+
+        <p>
+            'A must-read'---Sandeep Unnithan, managing editor, India Today
+
+            There are not many Indian heroes whose lives have been as dramatic and adventurous as that of Netaji Subhas Chandra Bose. That, however, is an assessment of his life based on what is widely known about him. These often revolve around his resignation from the Indian Civil Service, joining the freedom movement, to be exiled twice for over seven years, throwing a challenge to the Gandhian leadership in the Congress, taking up an extremist position against the British Raj, evading the famed intelligence network to travel to Europe and then to Southeast Asia, forming two Governments and raising two armies and then disappearing into the unknown. All this in a span of just two decades.
+            
+            Now, new information throws light on Bose's intense political activities surrounding the revolutionary groups in Bengal, Punjab, Maharashtra and United Provinces, his efforts to bridge the increasing communal divide and his influence among the splintered political landscape; his outlook and relations with women; his plunge into the depths of spirituality; his penchant for covert operations and his efforts to engineer a rebellion among the Indian armed forces. With this new information, what appeared to be dramatic now becomes more intense with plots and subplots under one man's single-minded focus on freeing the motherland and envisioning its development in a new era.
+            
+            Furthermore, one of the most sensitive issues that have prevented political parties and successive governments from talking much about Bose is his joining the Axis camp. While Jawaharlal Nehru and other prominent Congress leaders publicly denounced the move, the Communist Party of India went on to a prolonged vilification campaign. Sardar Patel issued instruction to Congress leaders to defend the INA soldiers without eulogizing their leader.
+            
+            Was Bose really a Nazi sympathiser? Knowing very well about the strong public opinion that existed among the political leadership and the intelligentsia in India against Nazi Germany, Fascist Italy, and imperial Japan, why did he risk his own political image by allying with the Axis powers?
+            
+            Pacey, thought-provoking and absolutely unputdownable, Bose: The Untold Story of an Inconvenient Nationalist will open a window to many hitherto untold and unknown stories of Netaji Subhas Chandra Bose.
+            
+            Probably the first critical biography of Netaji Subhas Chandra Bose till date.
+        </p>
+
+        <div class="myBtnHolder c20">
+            <a href="https://amzn.to/36TJuh1" class="MyBtn_Here"
+                target="_Abhishek">View Book</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <br>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination bt">
+            <li class="page-item ">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <li class="page-item"><a class="page-link" href=".//BOOKS.HTML">1</a></li>
+            <li class="page-item"><a class="page-link" href=".//bookes2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href=".//book3.html">3</a></li>
+            <li class="page-item"><a class="page-link" href=".//book4.html">4</a></li>
+            <li class="page-item"><a class="page-link" href=".//book5.html">5</a></li>
+            <li class="page-item"><a class="page-link" href=".//book6.html">6</a></li>
+            <li class="page-item"><a class="page-link" href=".//book7.html">7</a></li>
+            <li class="page-item"><a class="page-link" href=".//book8.html">8</a></li>
+            <li class="page-item"><a class="page-link" href=".//book9.html">9</a></li>
+            <li class="page-item"><a class="page-link" href=".//book10.html">10</a></li>
+
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Design Starts -->
+
+
+    <footer class="bg-dark" style="color: #fff;">
+        <p>Copyright &copy; Vanshika Academy 2021 | All Right Reserved !</p>
+    </footer>
+
+
+
+
+
+    <!-- Scroll Css -->
+    <script>
+
+        let progress = document.getElementById('progressBar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- My Javascripts -->
+    <script src="../js/script.js"></script>
+    <!-- Wow Js  -->
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

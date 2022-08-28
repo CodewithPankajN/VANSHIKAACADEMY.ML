@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Vanshika Academy</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Owl Stylesheets -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="./css/owl.theme.green.css" />
+
+  <!-- Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <!-- Animate Css -->
+  <link rel="stylesheet" href="./css/animate.css" />
+
+  <!-- J-query File Path -->
+  <script src="./js/jquery.min.js"></script>
+  <!-- Owl Javascript -->
+  <script src="./js/owl.carousel.min.js"></script>
+</head>
+<style>
+  strong {
+    color: crimson;
+    font-size: 1.5rem;
+  }
+
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  .auth_name {
+    color: aqua;
+    text-decoration: underline;
+  }
+
+  /* Scroll Bar Css */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  #scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  #progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animationMyScroll 3s linear infinite;
+  }
+
+  @keyframes animationMyScroll {
+
+    0%,
+    100% {
+      filter: hue-rotate(0deg);
+    }
+
+    50% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  #progressBar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+  }
+
+  #progressBar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+  }
+</style>
+
+<body>
+  <div id="progressBar"></div>
+  <div id="scrollPath"></div>
+
+  <!-- NavBar Area -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-auto title_main" style="color: #fff" href="/">Vanshika Academy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars" class="navbar-toggler-icon" style="color: #fff" aria-hidden="true"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <!-- 
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #fff;" href="#">Hindi Blogs</a>
+                    </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: #fff" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Courses
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./hindi.html">Hindi</a></li>
+              <li>
+                <a class="dropdown-item" href="./english/essay.html">English</a>
+              </li>
+ 
+              <li>
+                <a class="dropdown-item" href="./science.html">Science</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="./ebook">Ebook</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./commerce1.html">GameR</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <!-- <li>
+                <a class="dropdown-item" href="./Updates/civilservices.html">UPSC Updates</a>
+              </li> -->
+              <!-- <li>
+                <a class="dropdown-item" href="./Updates/examupdate.html">Exam Updates</a>
+              </li> -->
+              <li>
+                <a class="dropdown-item" href="./Updates/dailynews.html">Free Courses</a>
+              </li>
+              <!-- <li>
+                <a class="dropdown-item" href="./Updates/studentRoadMap.html">Student RoadMap</a>
+              </li> -->
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Blogs On India</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" style="color: #fff" href="./hindi.html">Ryhme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #fff" href="#jivan_parichya">Jivan Parichya</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color: #fff" href="./application.html">Application</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color: #fff" href="./essay.html">Essay</a>
+          </li>
+        </ul>
+
+        <!-- <a class="navbar-brand mx-auto title_main" style="color: #fff;" href="/">Vanshika Ki Pathshala</a> -->
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-warning" style="color: #fff" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Carousel -->
+  <div id="myCarousel">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="./images/unsplash img/img1.jpg" alt="No_Img" />
+      </div>
+      <div class="item">
+        <img src="./images/unsplash img/img5.jpg" alt="No_Img" />
+      </div>
+      <div class="item">
+        <img src="./images/unsplash img/img3.jpg" alt="No_Img" />
+      </div>
+      <div class="item">
+        <img src="./images/unsplash img/img6.jpg" alt="No_Img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Jivan Parichya -->
+
+  <section id="jivan_parichya">
+    <h1 style="text-align: center" class="wow fadeInRightBig">
+      JIVAN PARICHYA
+    </h1>
+
+    <div class="container">
+      <h1 class="auth_name">मीराबाई</h1>
+      <div class="row jivan_parichya_row">
+        <div class="col col-sm-12 col-md-12 col-lg-8 order-lg-0 order-md-1 order-sm-1">
+          <p style="text-align: justify; cursor: pointer">
+            ओपन परिचय दद की अनुभूति मात्र हैं । हिन्दी साहित्य में मीराबाई का
+            विशेष महत्व है । मीरा भक्त कवयित्री हैं । उनकी रचनाएँ मीराबाई का
+            जन्म राजस्थान में जोधपुर के मेड़ता के निकट चौकड़ी प्राम में सन्
+            1503 ई . र 2560 ई ) में हुआ था । वे राठोर रत्नसिंह की पुत्री थीं ।
+            बचपन में ही मीरा की माता का पिन हो गया था । इस कारण ये अपने पितामह
+            रावदूदाजी के साथ रहती थीं । रावदा कृष्ण ये । अत : मीरा भी कृष्ण
+            भक्ति में रंग गई । मीरा का विवाह उदयपुर के महाराज भोजराज पारेरो '
+            , ' गीत गोविन्द की टीका ' , ' राग - गोविन्द ' , ' राग - सोरठा के
+            पद ' , ' मीराबाई का मलार .. कवि - परिचय
+            1 . मीराबाई माम हुआ था । विवाह के कुछ वर्ष उपरान्त ही इनके पति का
+            स्वर्गवास हो गया । इस असला इनके हृदय को भारी आघात पहुंचाया । इससे
+            उनमें विरक्ति का भाव पैदा हो गया । वे सेवा में ही जीवन - यापन करने
+            लगी । वे राजमहल से निकलकर मंदिरों में जाने लगी और संगति में कृष्ण
+            - कीर्तन करने लगीं । इनकी अनन्य कृष्ण भक्ति और संत समागम से राणा
+            वार कष्ट हो गया । इससे चित्तौड़ के तत्कालीन राणा ने उन्हें भाँति -
+            भाँति की यातनाएं देना शुरू र दिया । कहते हैं कि एक बार मीरा को विष
+            भी दिया गया , किन्तु उन पर उसका असर नहीं है ? हुआ । राणा की
+            यातनाओं से ऊब कर ये कृष्ण की लीलाभूमि मथुरा - वृन्दावन चली गई और
+            वहीं र जीवन व्यतीत किया । मीरा की भक्ति - भावना बढ़ती गई और वे
+            प्रभु प्रेम में दीवानी बन छ । संसार से विरक्त , कृष्ण भक्ति में
+            लीन मीरा की वियोग भावना ही इनके साहित्य का मूल आधार है । मीरा अपने
+            अन्तिम दिनों में द्वारका चली गई । वहाँ ही सन् 1546 ई . ( संवत्
+            1603 वि ) में वे स्वर्ग सिधार गई । . ? • साहित्य सेवा मीराबाई
+            द्वारा लिखित काव्य उनके हृदय की मर्मस्पर्शी वेदना है और भक्ति की
+            उल्लीनता है । उन्होंने सीधे सरल भाव से अपने हृदय के भावों को कविता
+            के रूप में व्यक्त कर दिया है । उनका साहित्य भक्ति के आवरण में वाणी
+            की पवित्रता है और संगीत का माधुर्य है । न को शान्ति के लिए और
+            भक्ति मार्ग को पुष्ट करने के लिए मीरा की साहित्य सेवा सर्वोच्च
+            मीराबाई के नाम से जिन कृतियों का उल्लेख मिलता है उनके नाम हैं-
+            नरसी जी को रचनाएँ शिवलाल हायर सेकण्डरी कक्षाभाव व्यक्त किया है ।
+            भक्ति का यह भी एक गर्वागोत ' , ' राग विहाग ' और फुटकर पद । भौतिक
+            जीवन से निराश मीरा की एकान्त निर । गिरधर गोपाल में केन्द्रित है ।
+            ' मेरे तो गिरधर गोपाल दूसरो न कोई कहकर मीरा ने कृष्ण के प्रति
+            मीराबाई द्वारा रचित काव्य साहित्य में उनके हृदय की मर्मस्पर्शिनी
+            वेदना है , प्रेम की सहज भाव में अपने पदों में अभिव्यक्ति दे दी है
+            । मीरा के पदों के वाचन और गायन से संकर आकुलता है तथा भक्ति की
+            तल्लीनता है । उन्होंने अपने मन की अनुभूति को सीधे हा माजी मिलता है
+            कि मीरा की भक्ति - भावना अन्तःकरण से स्फूर्त है ।उन्होंने मुक्त
+            भाव से सभी भनि सम्पदायों से प्रभाव पहण किया है ।  उनकी रचनाओं में
+            माधुर्य समन्वित दाम्पत्य भाव है । मीरा का विरह पक्ष साहित्य की
+            दृष्टि से मार्मिक है । उनके आराध्य तो सगुण साकार श्रीकृष्ण हैं ।
+            मीरा के बहुत से पदों में रहस्यवाद स्पष्ट दिखाई देता है । रहस्यवाद
+            में प्रिय के प्रति उत्सुकता , मिलन और वियोग के चित्र हैं । .  <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+
+            <br /><br /><strong> भाव पक्ष .कला पक्ष</strong> <br />( 1 ) भाषा
+            - मीरा की भाषा राजस्थानी और ब्रजभाषा है , किन्तु पदों की रचना
+            बजभाषा में ही है । उनके कुछ पदों में भोजपुरी भी दिखाई देती है ।
+            मीरा की भाषा शुद्ध साहित्यिक भाषा न रहकर जनभाषा ही रही । <br />
+            ( 2 ) शैली - मीरा ने मुक्तक शैली का प्रयोग किया है । उनके पदों में
+            गेयंता है । भाव सम्प्रेषणता मीरा की गीति शैली की प्रधान विशेषता है
+            । <br />
+            ( 3 ) अलंकार - इनकी रचनाओं में अधिकतर उपमा , रूपक , उत्प्रेक्षा ,
+            अनुभास आदि अलंकारों को सर्वत्र देखा जा सकता है ।
+            <br />
+            साहित्य में स्थान मीरा ने अपने हृदय में व्याप्त वेदना और पीड़ा
+            को बड़े ही मार्मिक ढंग से प्रस्तुत किया है । भक्तिकाल के स्वर्ण
+            युग में मीरा के भक्ति भाव से सम्पन्न पद आज भी अलग ही जगमगाते दिखाई
+            देते हैं ।
+          </p>
+          <section>
+            <script>
+
+                var pubid = '9101727778477834';
+                <!------------------------------------------------------------------------->
+                <!-- Banner Ad Slot Id Here -->
+                var s1 = '2538991671';
+                var pn1 = 'com.FindThePairGame';
+                var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                </script>
+                <!------------------------------------------------------------------------->
+                
+                  <style>
+                            table, th, td {
+                                border: 1px solid black;
+                            }
+                        </style>
+                    <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                    <script src="jquery.tools.min.js"></script>
+                    <script type="text/javascript">
+                      $(document).ready(function(){
+                       $("ul.tabs").tabs("div.panes > div");
+                     });
+                 </script>
+                
+                     <!-- BANNER 1 -->
+                    <tr>
+                       <td> <script type="text/javascript">
+                var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                </script>
+        </section>
+        </div>
+        <div class="col col-sm-12 col-md-12 col-lg-4 order-lg-1 order-md-0 order-sm-0 JibanParichyaImg">
+          <!-- <img src="./images/jivan-parichaye.jpg" class="img-fluid" alt="No_Img"> -->
+          <img src="./images/ClientImg/Mirabai-and-Krishna-2.jpg" class="img-fluid" alt="No_Img" />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+  
+    <div class="container">
+      <h1 class="auth_name">सूरदास</h1>
+      <div class="row jivan_parichya_row">
+        <div class="col col-sm-12 col-md-12 col-lg-8 order-lg-0 order-md-1 order-sm-1">
+          <p style="text-align: justify; cursor: pointer">
+            सूरदास जीवन परिचय को जनभाषा के व्यापक धरातल पर अवतरित करके संगीत
+            और माधुर्य से मंडित किया । माया मध्यकालीन वैष्णव भक्त कवियों में
+            सूरदास का स्थान श्रेष्ठ है । सूरदास ने भक्रिया दिलनाथ द्वारा
+            स्थापित अशाप के अपणी भक्त कवि हैं । इनका जन्म सन् 14781 ' सोही '
+            नामक स्थान को इनका जन्मस्थान मानते हैं । बल्लभाचार्य जी ने इन्हें
+            दीक्षा प्रदान की । 195 वि ) में आगरा के समीप रुनकता नामक गांव में
+            हुआ था । कुछ विद्वान दिल्ली के । गोपर्थन स्थित श्रीनाथ जी के
+            मन्दिर में इनको कीर्तन करने के लिए नियुक्त कर दिया । इस आप आजीवन
+            गऊघाट पर रहते हुए श्रीमद्भागवत के आधार पर श्रीकृष्ण लीला से
+            सम्बनिता रचना छोड़कर सखाभाव की भक्ति के पदों की रचना करना शुरू कर
+            दिया । अष्टछाप के पर पाक्यों में सूरदास अपणी कवि थे । उनके काव्य
+            का मुख्य उद्देश्य कृष्ण भक्ति का प्रचार करने पदों की रचना करते रहे
+            और मधुर स्वर से उनका गायन करते रहे । महात्मा सूरदास का जन्मान्ध
+            होना विवादास्पद है । सूर की रचनाएँ यह सिद्ध करती है । एक जन्मान्ध
+            कवि इतना सजीव और उच्चकोटि का वर्णन नहीं कर सकता । सूरदास को मृत्यु
+            1583 ई . ( सं . 10-40 वि ) में मथुरा के समीप पारसोली नामक पाम में
+            विट्ठलनाथ जी की उपाल्या में हुई । कहा जाता है कि अपने परलोक गमन के
+            समय सूरदास " खंजन नैन रूप रस माते ' का गान अपने तानपूरे पर अत्यन्त
+            मधुर स्वर में कर रहे थे । सूरदास की भाषा ललित और कोमलकान्त पदावली
+            से युक्त बजभाषा है जिसमें सरलता के साथ - साथ प्रभावोत्पादकता भी
+            मिलती है । सूरदास हिन्दी काव्याकाश के सूर्य है जिनाने अपने काव्य -
+            कौशल से हिन्दी साहित्य की अप्रतिम सेवा की और बल्लभाचार्य से दीका
+            परर करने के बाद दास्यभाव और दैन्यभाव के पदों के स्थान पर वात्सल्य
+            और प्रधान सखाभाव हो भक्ति के पदों की रचना करना शुरू कर दिया । •
+            साहित्य सेवा सूरदास हिन्दी काव्याकाश के सूर्य हैं , जिन्होंने अपने
+            काव्य - कौशल से हिन्दी साहित्य को अप्रतिम सेवा की । इनके गुरु
+            बल्लभाचार्य थे । दीक्षा महण कर इन्होंने दैन्यभाव के पदों कीकासल्य
+            वर्णन को हिन्दी की अमूल्य निधि कहा जाता है जो सूरदास की रचनाओं में
+            मिलता बाल मनोविज्ञान के तो सूरदास अद्वितीय पारखी थे । विद्वानों के
+            अनुसार सूरदास ने तीन कृतियों का सृजन किया था 
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            
+            <br /><br />( 1 )
+            सूरसागर , 0 सूरसागर ही इनकी अमर कृति है । इसमें भगवान श्रीकृष्ण की
+            लीलाओं के सवा लिगेय पद है , परन्तु अभी तक 6 या 7 हजार के लगभग पद
+            प्राप्त है । <br />
+            ( 2 ) सूर सारावली में ग्यारह सौ छन्द संग्रहीत हैं । यह सूरसागर का
+            सार रूप पन्य है । इसम्मिलित हैं । इन पदों में रस का सर्वश्रेष्ठ
+            सूजन हुआ है । कवि - परिचय | 135 सूरसाराजली . <br />
+            ( 3 ) साहित्य लहरी । सूरदास सगुण भक्तिधारा कृष्णोपासक कवियों में
+            श्रेष्ठ कवि हैं । भावपक्ष ( क ) भक्तिभाव - सूरदास कृष्ण भक्त थे ।
+            काव्य ही उनका भगवत् भजन था । उनके व में एक भक्त हृदय की अभिव्यक्ति
+            सहज ही दिखाई देती है । सूर की भक्ति सखा - भाव पर हुए थी । कृष्ण को
+            सखा मानकर ही उन्होंने अपने आराध्य की समस्त बाल - लीलाओं और
+            मिलीलाओं का वर्णन किया है । <br />
+            ( 2 ) भावुकता एवं सहृदयता - सूरदास ने अपने पदों में मानव मन के
+            अनेक भावों का हर्णन किया है । उनके वर्णन में गोप - बालकों के माता
+            यशोदा के और पिता नन्द के विविध भावों को यथार्थता और मार्मिकता
+            मिलती है । <br />
+            ( 3 ) श्रेष्ठ रस संयोजना - सूर की उत्कृष्ट रस संयोजना के आधार पर
+            डॉ.श्यामसुन्दर दास रे उन रससिद्ध कवि ' कह कर पुकारा है । सूर के
+            काव्य में शान्त , नगार और वात्सल्य रस स्पष्ट रूप से दिखाई देता है
+            । <br />
+            ( 4 ) अद्वितीय वात्सल्य - सूरदास ने कृष्ण के बाल चरित्र , शरीर
+            सौन्दर्य , माता - पिता के हृदय वात्सल्य का जैसा स्वाभाविक , अनूठा
+            एवं मनोवैज्ञानिक सरस वर्णन किया है , वैसा वर्णन सम्पूर्ण विश्व के
+            साहित्य में दुर्लभ है । सूर वात्सल्य रस के सर्वोत्कृष्ट कवि हैं
+            ।<br />
+            ( 5 ) श्रृंगार रस का वर्णन - सूरदास ने अपनी रचनाओं में श्रृंगार के
+            दोनों पक्षों संयोग और वियोग का मार्मिक चित्रण करके उसे रसराज सिद्ध
+            कर दिया है । आचार्य रामचन्द्र शुक्ल ने लिखा है- " श्रृंगार का रस -
+            राजत्व यदि हिन्दी में कहीं मिलता है तो केवल सूर में ।
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            <br /><br /><strong>कला पक्ष</strong> <br />
+            ( I ) लालित्यप्रधान व्रजभाषा - सूरदास ने बोलचाल की बजभाषा को
+            लालित्य प्रधान प्रभाषा बना दिया है । उनकी प्रयुक्त भाषा सरल , सरस
+            एवं प्रभावशाली है जिससे भाव लोकोक्तियों के प्रयोग से अपनी भाषा में
+            चमत्कार उत्पन्न कर दिया है । भाषा में माधुर्य सा दिखाई देता है ।एक
+            विशेषता है । शिवलाल हायर सेकण्डरी हिन्दी कालिन्दी - कक्षा XII
+            <br />( 2 ) गेय पद शैली - सूरदास ने अपनी काव्य रचना गेय पद शैली
+            में की है । माधुर्य और प्रसाद गुण - सम्पन्न शैली वर्णनात्मक है ।
+            उनकी शैली में वचनवक्रता और वाग्विदग्धता उनका <br />( 3 ) अलंकारों
+            की सहज आवृत्ति - सूरदास की रचनाओं में अलंकार अपने स्वाभाविक
+            सौन्दर्य के साथ प्रविष्ट हो जाते हैं । डॉ . हजारी प्रसाद के शब्दों
+            के अनुसार , " अलंकारशास्त्र तो सूर के द्वारा अपना विषय वर्णन शुरू
+            करते ही उनके पीछे हाथ जोड़कर दौड़ पड़ता है , उपमानों की बाढ़ आ
+            जाती है । रूपकों की वर्षा होने लगती है । " <br />( 4 ) छंद योजना
+            की संगीतात्मकता - सूरदास ने मुक्तक गेय पदों की रचना की है एक
+            विशेषता है । शिवलाल हायर सेकण्डरी हिन्दी कालिन्दी - कक्षा XII
+            <br />( 5 ) गेय पद शैली - सूरदास ने अपनी काव्य रचना गेय पद शैली
+            में की है । माधुर्य और प्रसाद गुण - सम्पन्न शैली वर्णनात्मक है ।
+            उनकी शैली में वचनवक्रता और वाग्विदग्धता उनका ( 3 ) अलंकारों की सहज
+            आवृत्ति - सूरदास की रचनाओं में अलंकार अपने स्वाभाविक सौन्दर्य के
+            साथ प्रविष्ट हो जाते हैं । डॉ . हजारी प्रसाद के शब्दों के अनुसार ,
+            " अलंकारशास्त्र तो सूर के द्वारा अपना विषय वर्णन शुरू करते ही उनके
+            पीछे हाथ जोड़कर दौड़ पड़ता है , उपमानों की बाढ़ आ जाती है । रूपकों
+            की वर्षा होने लगती है । " <br />( 6 ) छंद योजना की संगीतात्मकता -
+            सूरदास ने मुक्तक गेय पदों की रचना की है । उनके पदों में
+            संगीतात्मकता सर्वत्र परिलक्षित होती है । • साहित्य में स्थान
+            सूरदास अष्टछाप के ब्रजभाषा कवियों में सर्वोत्कृष्ट कवि हैं । इनका
+            बाल प्रकृति - चित्रण , वात्सल्य तथा श्रृंगार का वर्णन अद्वितीय है
+            । सूर का क्षेत्र सीमित है , पर उसके वे एकछत्र सम्राट हैं । वे अपनी
+            काव्यकला और साहित्यिक प्रतिभा के बल पर हिन्दी साहित्य जगत के सूर्य
+            माने जाते हैं । जब तक सूर की प्रेमासिक्त वाणी का सुधा प्रवाह है ,
+            तब तक हिन्दू जीवन से समरसता का स्रोत कभी सूखने नहीं पाएगा । = 0
+          </p>
+        </div>
+        <div class="col col-sm-12 col-md-12 col-lg-4 order-lg-1 order-md-0 order-sm-0 JibanParichyaImg">
+          <!-- <img src="./images/jivan-parichaye.jpg" class="img-fluid" alt="No_Img"> -->
+          <img src="./images/ClientImg/surbaba.jpg" class="img-fluid" alt="No_Img" />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <h1 class="auth_name">कबीरदास</h1>
+      <div class="row jivan_parichya_row">
+        <div class="col col-sm-12 col-md-12 col-lg-8 order-lg-0 order-md-1 order-sm-1">
+          <p style="text-align: justify; cursor: pointer">
+            जीवन परिचय जनभाषा में भक्ति , नीति और दर्शन प्रस्तुत करने वाले
+            कवियों में कबीर अग्रगण्य है । कबीरदास जी निर्गुण काव्यधारा के
+            ज्ञानमार्गी शाखा के कवि थे । इनका जन्म काशी में सन 1398 ई . में
+            हुआ । इनकी रचनाओं से प्रतीत होता है कि इनके माता - पिता जुलाहे थे
+            । जनश्रुति । कि कबीर एक विधवा ब्राह्मणी की परित्यक्त संतान थे ।
+            इनका पालन - पोषण एक जुलाहा दम्मान ने किया । इस निःसन्तान जुलाहा
+            दम्पत्ति नीरू और नीमा ने इस बालक का नाम कबीर खा कबीर की शिक्षा
+            विधिवत् नहीं हुई । उन्हें तो सत्संगति की अनंत पाठशाला में
+            आत्मज्ञान और ईश्वर प्रेम का पाठ पढ़ाया गया । स्वयं कबीर कहते हैं-
+            “ मसि कागद छुऔ नहीं , कलम गाही नहिं हाथ । " कबीर गृहस्थ थे । इनको
+            स्वामी रामानन्द से ' राम ' नाम का गुरुमंत्र मिला । उनकी पत्नी का
+            नाम लोई , पुत्र का नाम कमाल और पुत्री का नाम कमाली था । कबीर
+            पाखण्ड और अन्धविश्वासों के घोर विरोधी थे । कबीर का बचपन मगहर में
+            बीता , परन्तु बाद में काशी में<br /><br />
+
+            सोलाजोपरन्तिम चिोपूनमार पले ग m कार 130 वर्गको भी कचौरमाय अएएस
+            रिमा पनी थे । को नामों को सोन करके सम्पादित किया खुलेआकाशजीने
+            लोगों के बीच अपने अनुभवों को अभिव्यक्त करना ही उसकी जान बरको
+            अभिव्यक्तियों को शिष्यों द्वारा तीन पगे काल किया गया । mersी कोर
+            को शिक्षाओं और सिद्धान्तों का प्रस्तुतीकरण ' सायी में हुआ है । हो
+            सकर इसमें कभीर के गेय पद संग्रहीत है । गेय पद होने के कारण इसमें
+            इससकता है । इनमें कभीर ने भक्ति भावना , समाज सुधार और रहस्यवादी
+            भावनाओं का कास्पैपी रमैनी चौपाई छन्द में है । इनमें कबीर का
+            रहस्यवाद और दार्शनिक विचार हम दोहा कर का प्रयोग हुआ है । ( निर्गुण
+            ब्रह्म की उपासना कबीर निर्गुण ब्रह्म के उपासक थे । उनका उपास्य ,
+            अरूप , कम अनुपम सूक्ष्म तत्व है । इसे वे ' राम ' नाम से पुकारते थे
+            । कबीर के ' राम ' निर्गुण निराकार सानह है । ( 2 ) प्रेम भावना और
+            भक्ति कबीर ने ज्ञान को महत्व दिया । उनकी कविता में स्थान - स्थान
+            पर प्रेम और भक्ति की उत्कृष्ट भावना परिलक्षित होती है । उनका कहना
+            है- " यह हो पर है प्रेम का , खाला का घर नाहि " और " ढाई आखर प्रेम
+            का पढ़े सो पण्डित होय । ( 3 ) रहस्य भावना - परमात्मा से विविध
+            सम्बन्ध जोड़कर अन्त में ब्रह्म में लीन हो जाने के भाव अपनी कविता
+            में कबीर ने व्यक्त किए हैं । जैसे " राम मोरे पिऊ मैं राम की
+            बहुरिया । " ( 4 ) समाज सुधार और नीति उपदेश - सामाजिक जीवन में फैली
+            बुराइयों को मिटाने के लिए कबीर की वाणी कर्कश हो उठी । कबीर ने
+            समाजगत बुराइयों का खण्डन तो किया ही , साथ - साथ आदर्श जीवन के लिए
+            नीतिपूर्ण उपदेश भी दिया । कबीर के काव्य में इस्लाम के एकेश्वरवाद ,
+            भारतीय द्वैतवाद , योग साधना , अहिंसा , सूफियों की प्रेम साधना आदि
+            का समन्वित दिखाई देता है । इनके काव्य में शान्त रस की प्रधानता है
+            । आत्मा - परमात्मा के मिलन का श्रृंगार भी शान्त साही बन गया है ।
+            [है । स्थानीय बोलचाल के शब्दों की प्रधानता दिखाई देती है । उसमें
+            पंजाबी , राजस्थानी , उद ।
+            <br /><br />
+            ( 1 ) अकृत्रिम भाषा - कबीर की भाषा अपरिष्कृत है । उसमें कृत्रिमता
+            का अंश भी नहीं । फारसी आदि भाषाओं के शब्दों का विकृत रूप प्रयोग
+            किया गया है । इससे भाषा में विचित्रता आ गई है । कबीर की भाषा में
+            भाव प्रकट करने की सामर्थ्य विद्यमान है । इनकी भाषा को
+            <br />
+            ( 2 ) सहज निर्द्वन्द्व शैली - कबीर ने सहज , सरल व सरस शैली में
+            अपने उपदेश दिए हैं । 142 | शिवलाल हायर सेकण्डरी हिन्दी कालिन्दी -
+            कक्षा XII . कला पक्ष पंचमेल खिचड़ी अथवा सधुक्कड़ी भी कहा जाता है ।
+            भाव प्रकट करने की दृष्टि से कबीर की भाषा पूर्णतः सक्षम है । काव्य
+            में विरोधाभास , दुर्बोधता एवं व्यंग्यात्मकता विद्यमान है । <br />(
+            3 ) अलंकार - कबीर के काव्य में स्वभावतः अलंकारिता आ गई है । उपमा ,
+            रूपक सांगरूपक , अन्योक्ति , उत्प्रेक्षा , विरोधाभास आदि अलंकारों
+            की प्रचुरता है । <br />( 4 ) छन्द कबीर की साखियों में दोहा छन्द का
+            प्रयोग हुआ है । ' सबद ' पद है तथा ' रमैनी ' चौपाई छन्दों में मिलते
+            हैं । ' कहरवाँ ' छन्द भी उनकी रचनाओं में मिलता है । इन छन्दों का
+            प्रयोग सदोष ही है । <br /><br />
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            <strong>साहित्य में स्थान</strong> कबीर समाज सुधारक एवं युग
+            निर्माता के रूप में सदैव स्मरण किए जायेंगे । उनके काव्य में निहित
+            सन्देश और उपदेश के आधार पर नवीन समन्वित समाज की संरचना
+            प्रसादसक्सैना ने लिखा है- " कबीर एक उच्चकोटि के साधक , सत्य के
+            उपासक और ज्ञान के अन्वेषक थे । उनका सम्भव है । डॉ . द्वारका समस्त
+            साहित्य एक जीवन मुक्त सन्त के गूढ़ एवं गम्भीर अनुभवों का भण्डार है
+            । "  
+          </p>
+        </div>
+        <div class="col col-sm-12 col-md-12 col-lg-4 order-lg-1 order-md-0 order-sm-0 JibanParichyaImg">
+          <!-- <img src="./images/jivan-parichaye.jpg" class="img-fluid" alt="No_Img"> -->
+          <img src="./images/ClientImg/Sant kabir Das 01.jpg" class="img-fluid" alt="No_Img" />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <h1 class="auth_name">गोस्वामी तुलसीदास</h1>
+      <div class="row jivan_parichya_row">
+        <div class="col col-sm-12 col-md-12 col-lg-8 order-lg-0 order-md-1 order-sm-1">
+          <p style="text-align: justify; cursor: pointer">
+            एक सिद्ध कवि हैं जो देश - काल की सीमाओं से परे हैं । मानव प्रकृति
+            के जिन रूपों का हृदयग्राही वर्णन तुलसी के काव्य में मिलता है ,
+            वैसा अन्यत्र उपलव्य जन्म - तिथि , जन्म - स्थान , माता - पिता और
+            विवाहादि के सम्बन्ध में विद्वानों में पर्याप्त मतभेद हैं । 13.
+            गोस्वामी तुलसीदास ( 2014 , 17 ) र भी तुलसी के जीवन - वृत्त से
+            सम्बन्धित जो भी सामग्री मिलती है उसके आधार पर कहा जाता है कि उनका
+            जन्म संवत् 1589 वि . में बाँदा जिले के राजापुर नामक स्थान में हुआ
+            था । परन्तु कुछ लोग सोरों ( एटा ) को इनका जन्म स्थान मानते हैं ।
+            इनके पिता का नाम आत्माराम और माता का नाम हुलसी था । कहा जाता है कि
+            इनका जन्म अभुक्तमूल नामक अनिष्टकारी नक्षत्र में होने के कारण इनके
+            माता - पिता ने इन्हें जन्म होते ही त्याग दिया था । स्वामी नरहरिदास
+            के सानिध्य में इन्होंने वेद - पुराण एवं अन्य शास्त्रों का अध्ययन
+            किया । तुलसीदास का विवाह दीनबन्धु पाठक की सुन्दर कन्या रत्नावली के
+            साथ हुआ । किंवदन्ती है कि रत्नावली के व्यंग्य वाणों से आहत होकर ही
+            तुलसी को संसार और सांसारिक ऐश्वयों से विरक्ति हो गई और सब कुछ
+            छोड़कर वह काशी चले गए । वहाँ इन्होंने नाना पुराण निगमागम का गहन
+            अध्यन किया , साथ ही रामकथा कहते रहे । काशी छोड़कर तुलसीदास अयोध्या
+            चले गए और वहीं पर ' रामचरितमानस ' का प्रणयन किया । तुलसी ने संसार
+            तो त्याग ही दिया था । वे राम के चरित की भावना भरी हुई थी ।
+
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            <br /><br /><strong>साहित्य सेवा</strong><br />
+            गायन में लग गए और स्वयं को अपने आराध्य राम की भक्ति में समर्पित कर
+            दिया । संवत् 1680 वि . में इस महात्मा ने शरीर के बन्धनों को तोड़
+            दिया और परमतत्व में विलीन हो गए । तुलसी के काव्य में प्रेम की
+            उन्मत्तता , उत्कृष्ट वैराग्य , राम की अनन्य भक्ति एवं लोकमंगल
+            तुलसी के काव्य में लोकमंगल की भावना परिपूर्ण थी । तुलसी ने राम के
+            लोकमंगलकारी रूप को अपनी लोकपावनी कृतियों के सामने प्रतिष्ठापित
+            किया है । तुलसी ने अपनी साहित्यिक कृतियों के माध्यम से समाजगत ,
+            राजनीतिक , आर्थिक स्थितिपरक तथा विविध जातिगत सम्बन्धों और उनके
+            एकीकरण का अन्यतम प्रयास किया है । प्रत्येक तरह की एवं प्रत्येक
+            क्षेत्र की समस्याओं का समाधान ढूँढ़ने का तर्कसंगत उपाय तुलसी ने
+            प्रत्येक वर्ग के लिए अपने ही सृजित साहित्य में यथास्थान प्रस्तुत
+            किया है ।
+            <br /><br /><strong>रचनाएँ उनकी प्रमुख कृतियाँ हैं —</strong><br />
+            दोहावली , कवितावली , रामचरित मानस , विनय पत्रिका , रामाज्ञा प्रश्न
+            , हनुमान बाहुक , रामलला , नहछू , पार्वती मंगल , बरवै रामायण ,
+            संदीपनी तथा गीतावली । रामचरित मानस हिन्दी साहित्य का सर्वोत्कृष्ट
+            महाकाव्य है । सोहर छन्दों में लिखे हुए ' नहछू ' , ' जानकी मंगल '
+            और ' पार्वती मंगल ' अच्छे खण्डकाव्य हैं । ' गीतावली ' , ' कृष्ण
+            गीतावली ' , ' विनय पत्रिका के सर्वोत्तम गीतिकाव्यों है । ' विनय
+            पत्रिका हिन्दी के विनय काव्यों में श्रेष्ठ है । ' कवितावली '
+            मुक्तक काव्य परम्परा की उत्कृष्ट रचना है । . <br />
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            <br /><strong>भाव पक्ष</strong><br />
+            ( 1 ) भक्ति - भावना - तुलसी रामभक्ति ' शाखा के प्रमुख कवि थे ।
+            धार्मिक दृष्टि से उदार होने का परिचय उन्होंने शिव , दुर्गा , गणेश
+            आदि सभी देवी देवताओं की स्तुति करके दिया है । राम के प्रति तुलसी
+            की भक्ति सेव्य - सेवक भाव की है । राम ही उनका एकमात्र बल , एकमात्र
+            आशा और एकमात्र विश्वास है । उदाहरण देखिए " एक भरोसो एक बल , एक आस
+            विश्वास । एक राम घनस्याम हित , चातक तुलसीदास ।। " <br />( 2 )
+            समन्वयवादी दृष्टिकोण - तुलसी का दृष्टिकोण अत्यन्त व्यापक एवं सम था
+            । उन्होंने राम के भक्त होते हुए भी अन्य देवी - देवताओं की वन्दना
+            की । तुलसी की रचनाजा में भारतीय संस्कृति एवं धार्मिक विचारधारा
+            पूर्णतः दिखाई देती है । वह प्रत्येक धर्म पद्धति को भगवान की
+            प्राप्ति का साधन मानते हैं । विभिन्न क्षेत्रों में समन्वय के प्रति
+            तुलसी इतने सचेष्ट थे कि अपने आराध्य राम में भी उन्होंने शक्ति ,
+            शील और सौन्दर्य का अद्भुत समन्वय प्रस्तुत किया है ।
+            <br />
+            ( 3 ) दार्शनिक भाव - तुलसी ने अपनी भक्ति का निरूपण यद्यपि दार्शनिक
+            आधार पर किया है , किन्तु उनकी दार्शनिक विचारधारा किसी मत या वाद से
+            परे है । तुलसी की दृष्टि में राम साक्षात् परमब्रह्म हैं । संसार
+            क्षणभंगुर और असत्य है । भवसागर को पार करने के दो ही साधन हैं -
+            ज्ञान और भक्ति । वह ज्ञान और भक्ति में कोई भेद नहीं मानते "
+            ज्ञानहि भक्तिहिं नहिं कछु भेदा । उभय हरहिं भव संभव खेदा ।।
+          </p>
+        </div>
+        <div class="col col-sm-12 col-md-12 col-lg-4 order-lg-1 order-md-0 order-sm-0 JibanParichyaImg">
+          <img src="./images/ClientImg/Tulsidas-Hindi.webp" class="img-fluid" alt="No_Img" />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <h1 class="auth_name">आचार्य रामचन्द्र शुक्ल</h1>
+      <div class="row jivan_parichya_row">
+        <div class="col col-sm-12 col-md-12 col-lg-8 order-lg-0 order-md-1 order-sm-1">
+          <p style="text-align: justify; cursor: pointer">
+            <strong> जीवन परिचय </strong><br />
+            आचार्य रामचन्द्र शुक्ल का जन्म 11 अक्टूबर , सन् 1884 को उत्तर
+            प्रदेश के बस्ती जनपद के अगोना ग्राम में हुआ था । आपके पिता पं .
+            चन्द्रबलि शुक्ल सुपरवाइजर कानूनगो थे । शुक्लजी ने एफ . ए . ( इण्टर
+            ) तक को शिक्षा प्राप्त की । शिक्षा समाप्ति पर जीविकोपार्जन के लिए
+            मिर्जापुर के मिशन स्कूल में ड्राइंग के शिक्षक हो गये । इस समय तक
+            इनके लेख पत्र - पत्रिकाओं में प्रकाशित होने लगे । जब नागरी
+            प्रचारिणी सभा , वाराणसी द्वारा ' हिन्दी शब्द सागर ' नाम से शब्द -
+            कोश के निर्माण का कार्य प्रारम्भ किया गया , तब शुक्लजी मात्र
+            छब्बीस वर्ष की अलग में उसके सहायक सम्पादक नियुक्त किये गये ( उसके
+            बाद हिन्दू विश्वविद्यालय , वाया हिन्दी विभाग में प्राध्यापक हो गये
+            ( सन् 1937 में आप वहाँ हिन्दी विभाग के अभाव । | 2 फरवरी , सन् 1940
+            को आपका निधन हो गया । ) • साहित्य सेवा आचार्य शुक्लजी की प्रतिभा
+            बहुमुखी थी । वे कवि , निबन्धकार , आलोचक , सम्पादक तथा अनुवादक अनेक
+            रूपों में हमारे सामने आते हैं । आपने ' हिन्दी शब्द सागर ' और '
+            नागरी प्रचारिणी पत्रिका ' का सम्पादन किया । उन्होंने अपने
+            साहित्यिक जीवन में हिन्दी को उच्चकोटि के निबन्ध , वैज्ञानिक
+            समालोचनाएँ , साहित्यिक प्रन्थ एवं सरल कविताएं प्रदान की । शुक्ल जी
+            ने हिन्दी में समालोचना और निबन्ध कला का उच्च आदर्श स्थापित किया ।
+            उनसे पहले की समालोचनाओं में गुण - दोष विवेचन को ही प्रधानता थी ।
+            उन्होंने वैज्ञानिक ढंग की व्याख्यात्मक आलोचना - पद्धति की नींव
+            डाली और जायसी , तुलसी तथा सूर के काव्यों पर उत्कृष्ट व्याख्यात्मक
+            आलोचनाएँ लिखीं । आपने करुणा , उत्साह , क्रोध , श्रद्धा और भक्ति
+            आदि मनोविकारों पर सुन्दर निबन्ध लिखे । उनके निबन्ध ' चिन्तामणि '
+            नामक पुस्तक में संग्रहीत हैं । ' चिन्तामणि ' पर हिन्दी साहित्य
+            सम्मेलन की ओर से आपको ' मंगलाप्रसाद पारितोषिक ' प्राप्त हुआ ।
+            उन्होंने ' हिन्दी साहित्य का इतिहास ' नामक गवेषणापूर्ण प्रामाणिक
+            मन्थ लिखा , जिस पर हिन्दुस्तानी एकेडमी , प्रयाग ने पुरस्कार प्रदान
+            किया ।<br />
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            <br /><strong>रचनाएँ</strong><br />
+            आचार्य रामचन्द्र शुक्ल की प्रमुख रचनाएं अग्र प्रकार हैं शिवलाल
+            हायर सेकण्डरी हिन्दी कालिदी कविय - संपह - ' चिन्तामणि , विचार -
+            वीथी ।
+            <br />( 2 ) आलोचना - रिवेणी , ' रस मीमांसा ' । <br />( 3 ) इतिहास
+            - हिन्दी साहित्य का इतिहास ' ।वर्ण विषय निवन्य के क्षेत्र में भी
+            प्रखरता के साथ परिलक्षित होती है । नियम एवं आलोचना दोनों ही
+            साहित्य के समस्त क्षेत्रों को स्पर्श करने वाली शुक्लजी की प्रतिभा
+            समालोचना में शुक्लजी ने लोकमंगल एवं नैतिक आदर्श को प्रमुख स्थान
+            दिया है । निवन्य - रचना के उन्होंने सामाजिक उपयोगिता से सम्बन्धित
+            मानव - मनोभावों पर सुन्दर निबन्ध लिखें । ने मनोभावों सम्बन्धी
+            निबन्धों के साथ ही समीक्षात्मक एवं सैद्धान्तिक निबन्धों की भी रचना
+            .भाषा आचार्य शुक्लजी की भाषा परिष्कृत , प्रौढ़ एवं साहित्यिक खड़ी
+            बोली है ।
+            <br />
+            <section>
+              <script>
+
+                  var pubid = '9101727778477834';
+                  <!------------------------------------------------------------------------->
+                  <!-- Banner Ad Slot Id Here -->
+                  var s1 = '2538991671';
+                  var pn1 = 'com.FindThePairGame';
+                  var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+                  </script>
+                  <!------------------------------------------------------------------------->
+                  
+                    <style>
+                              table, th, td {
+                                  border: 1px solid black;
+                              }
+                          </style>
+                      <link type="text/css" href="css/tabs-1.css" rel="stylesheet" /> 
+                      <script src="jquery.tools.min.js"></script>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                         $("ul.tabs").tabs("div.panes > div");
+                       });
+                   </script>
+                  
+                       <!-- BANNER 1 -->
+                      <tr>
+                         <td> <script type="text/javascript">
+                  var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+                  </script>
+          </section>
+            <br /><strong>भाषा</strong><br />
+            : सौष्ठव है तथा उसमें गम्भीर विवेचन की अपूर्व शक्ति है । शुक्लजी
+            की भाषा में व्यर्थ । शब्दाडम्बर नहीं मिलता । भाव और विषय के अनुकूल
+            होने के कारण वह सर्वथा सजीव की स्वाभाविक है । गूढ विषयों के
+            प्रतिपादन में भाषा अपेक्षाकृत क्लिष्ट है । उसमें संस्कृत के तमाम
+            शब्दों की बहुलता है । वाक्य - विन्यास भी कुछ लम्बे हैं । सामान्य
+            विचारों के विवेचन में भाषा सरल एवं व्यावहारिक है । कहावतों एवं
+            मुहावरों के प्रयोग से ठसमें सरसता आ गयौ । शुक्लजी की भाषा
+            व्यवस्थित तथा पूर्ण व्याकरण सम्मत है तथा उसमें कहीं भी शिथिलता
+            देखने को नहीं मिलती । भाषा की इसी कसावट के कारण उसमें समास शक्ति
+            पायी जाती है तथा कहीं - कहीं तो भाषा सूक्तिमयी बन गयी है ; जैसे- "
+            बैर क्रोध का अचार या मुरब्बा है । ' .शैली शुक्लजी अपनी शैली के
+            स्वयं निर्माता थे । उनकी शैलीसमास के रूप से प्रारम्भ होकर व्यास
+            शैली के रूप में समाप्त होती है अर्थात् एक विचार को सूत्र रूप में
+            कहकर फिर उसको व्याख्या कर देते हैं । मुख्य रूप से शुक्लजी की शैली
+            चार प्रकार की है
+            <br />( 1 ) समीक्षात्यक शैली - शुक्लजी ने व्यावहारिक , समीक्षात्मक
+            एवं समालोचनात्मक निबन्धों में इस शैली का प्रयोग किया है । इस शैली
+            में वाक्य छोटे , संयत एवं गम्भीर हैं । इसमें विषय का प्रतिपादन
+            सरलता के साथ इस प्रकार किया गया है कि सहज ही हृदयंगम हो जाता है ।
+            <br />( 2 ) गवेषणात्मक अनुसन्धानपरक तथा सैद्धान्तिक समीक्षा
+            सम्बन्धी तथा तथ्यों के विश्लेषण निरूपण में शुक्लजी ने इस शैली का
+            प्रयोग किया है । यह शैली गम्भीर तथा कुछ सीमा तक दुरूह है । शब्द -
+            विन्यास क्लिष्ट तथा वाक्य - विन्यास जटिल है । यह शैली सामान्य
+            पाठकों के लिए बोधगम्य नहीं है । <br />( 3 ) भावात्मक शैली इस शैली
+            में वाक्य कहीं छोटे तथा कहीं लम्बे हैं तथा भाषा कुछ - कुछ अलंकारिक
+            हो गयी है । इसमें भावनाओं का धाराप्रवाह रूप मिलता है । <br />( 4 )
+            हास्य - विनोद एवं व्यंग्य प्रधान शैली इस शैली के दर्शन मनोविकारों
+            तथा समीक्षात्मक निबन्धों में यत्र - यत्र ही होते हैं , क्योंकि
+            हास्य तथा व्यंग्य शुक्लजी के निबन्धों का मुख्य विषय नहीं है , फिर
+            भी इस शैली के प्रयोग से निबन्धों में रोचकता आ गयी है
+          </p>
+        </div>
+        <div class="col col-sm-12 col-md-12 col-lg-4 order-lg-1 order-md-0 order-sm-0 JibanParichyaImg">
+          <img src="./images/ClientImg/ramchandra-shukla.jpg" class="img-fluid" alt="No_Img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Design Starts -->
+
+  <footer class="bg-dark" style="color: #fff">
+    <p>Copyright &copy; Vanshika Academy 2021 | All Right Reserved !</p>
+  </footer>
+
+  <!-- My Javascripts -->
+  <script src="./js/script.js"></script>
+
+  <!-- Scroll Css -->
+  <script>
+    let progress = document.getElementById("progressBar");
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function () {
+      let progressHeight = (window.pageYOffset / totalHeight) * 100;
+      progress.style.height = progressHeight + "%";
+    };
+  </script>
+
+  <!-- Wow Js  -->
+  <script src="./js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<!-- Google Adsense -->
+<!-- <script data-ad-client="ca-pub-3770383700507876" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- <script data-ad-client="ca-pub-5013856727474004" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- <script data-ad-client="ca-pub-5013856727474004" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- <script data-ad-client="ca-pub-9126652842133366" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>   -->
+<!-- <script data-ad-client="ca-pub-5013856727474004" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
